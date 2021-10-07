@@ -1,0 +1,159 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "VUY9FY_HFT_2021221.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "VUY9FY_HFT_2021221.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VUY9FY_HFT_2021221.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VUY9FY_HFT_2021221.Data.dll": {}
+        }
+      },
+      "VUY9FY_HFT_2021221.Logic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "VUY9FY_HFT_2021221.Models": "1.0.0",
+          "VUY9FY_HFT_2021221.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VUY9FY_HFT_2021221.Logic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VUY9FY_HFT_2021221.Logic.dll": {}
+        }
+      },
+      "VUY9FY_HFT_2021221.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/VUY9FY_HFT_2021221.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VUY9FY_HFT_2021221.Models.dll": {}
+        }
+      },
+      "VUY9FY_HFT_2021221.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "VUY9FY_HFT_2021221.Data": "1.0.0",
+          "VUY9FY_HFT_2021221.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VUY9FY_HFT_2021221.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VUY9FY_HFT_2021221.Repository.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VUY9FY_HFT_2021221.Data/1.0.0": {
+      "type": "project",
+      "path": "../VUY9FY_HFT_2021221.Data/VUY9FY_HFT_2021221.Data.csproj",
+      "msbuildProject": "../VUY9FY_HFT_2021221.Data/VUY9FY_HFT_2021221.Data.csproj"
+    },
+    "VUY9FY_HFT_2021221.Logic/1.0.0": {
+      "type": "project",
+      "path": "../VUY9FY_HFT_2021221.Logic/VUY9FY_HFT_2021221.Logic.csproj",
+      "msbuildProject": "../VUY9FY_HFT_2021221.Logic/VUY9FY_HFT_2021221.Logic.csproj"
+    },
+    "VUY9FY_HFT_2021221.Models/1.0.0": {
+      "type": "project",
+      "path": "../VUY9FY_HFT_2021221.Models/VUY9FY_HFT_2021221.Models.csproj",
+      "msbuildProject": "../VUY9FY_HFT_2021221.Models/VUY9FY_HFT_2021221.Models.csproj"
+    },
+    "VUY9FY_HFT_2021221.Repository/1.0.0": {
+      "type": "project",
+      "path": "../VUY9FY_HFT_2021221.Repository/VUY9FY_HFT_2021221.Repository.csproj",
+      "msbuildProject": "../VUY9FY_HFT_2021221.Repository/VUY9FY_HFT_2021221.Repository.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "VUY9FY_HFT_2021221.Logic >= 1.0.0",
+      "VUY9FY_HFT_2021221.Models >= 1.0.0",
+      "VUY9FY_HFT_2021221.Repository >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\szzso\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Test\\VUY9FY_HFT_2021221.Test.csproj",
+      "projectName": "VUY9FY_HFT_2021221.Test",
+      "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Test\\VUY9FY_HFT_2021221.Test.csproj",
+      "packagesPath": "C:\\Users\\szzso\\.nuget\\packages\\",
+      "outputPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Test\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\szzso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Logic\\VUY9FY_HFT_2021221.Logic.csproj": {
+              "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Logic\\VUY9FY_HFT_2021221.Logic.csproj"
+            },
+            "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\VUY9FY_HFT_2021221.Models.csproj": {
+              "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\VUY9FY_HFT_2021221.Models.csproj"
+            },
+            "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Repository\\VUY9FY_HFT_2021221.Repository.csproj": {
+              "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Repository\\VUY9FY_HFT_2021221.Repository.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

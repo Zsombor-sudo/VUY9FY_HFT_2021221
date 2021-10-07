@@ -1,0 +1,326 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Test\\VUY9FY_HFT_2021221.Test.csproj": {}
+  },
+  "projects": {
+    "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Data\\VUY9FY_HFT_2021221.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Data\\VUY9FY_HFT_2021221.Data.csproj",
+        "projectName": "VUY9FY_HFT_2021221.Data",
+        "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Data\\VUY9FY_HFT_2021221.Data.csproj",
+        "packagesPath": "C:\\Users\\szzso\\.nuget\\packages\\",
+        "outputPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\szzso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\VUY9FY_HFT_2021221.Models.csproj": {
+                "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\VUY9FY_HFT_2021221.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Logic\\VUY9FY_HFT_2021221.Logic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Logic\\VUY9FY_HFT_2021221.Logic.csproj",
+        "projectName": "VUY9FY_HFT_2021221.Logic",
+        "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Logic\\VUY9FY_HFT_2021221.Logic.csproj",
+        "packagesPath": "C:\\Users\\szzso\\.nuget\\packages\\",
+        "outputPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Logic\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\szzso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\VUY9FY_HFT_2021221.Models.csproj": {
+                "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\VUY9FY_HFT_2021221.Models.csproj"
+              },
+              "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Repository\\VUY9FY_HFT_2021221.Repository.csproj": {
+                "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Repository\\VUY9FY_HFT_2021221.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\VUY9FY_HFT_2021221.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\VUY9FY_HFT_2021221.Models.csproj",
+        "projectName": "VUY9FY_HFT_2021221.Models",
+        "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\VUY9FY_HFT_2021221.Models.csproj",
+        "packagesPath": "C:\\Users\\szzso\\.nuget\\packages\\",
+        "outputPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\szzso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Repository\\VUY9FY_HFT_2021221.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Repository\\VUY9FY_HFT_2021221.Repository.csproj",
+        "projectName": "VUY9FY_HFT_2021221.Repository",
+        "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Repository\\VUY9FY_HFT_2021221.Repository.csproj",
+        "packagesPath": "C:\\Users\\szzso\\.nuget\\packages\\",
+        "outputPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\szzso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Data\\VUY9FY_HFT_2021221.Data.csproj": {
+                "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Data\\VUY9FY_HFT_2021221.Data.csproj"
+              },
+              "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\VUY9FY_HFT_2021221.Models.csproj": {
+                "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\VUY9FY_HFT_2021221.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Test\\VUY9FY_HFT_2021221.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Test\\VUY9FY_HFT_2021221.Test.csproj",
+        "projectName": "VUY9FY_HFT_2021221.Test",
+        "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Test\\VUY9FY_HFT_2021221.Test.csproj",
+        "packagesPath": "C:\\Users\\szzso\\.nuget\\packages\\",
+        "outputPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\szzso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Logic\\VUY9FY_HFT_2021221.Logic.csproj": {
+                "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Logic\\VUY9FY_HFT_2021221.Logic.csproj"
+              },
+              "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\VUY9FY_HFT_2021221.Models.csproj": {
+                "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Models\\VUY9FY_HFT_2021221.Models.csproj"
+              },
+              "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Repository\\VUY9FY_HFT_2021221.Repository.csproj": {
+                "projectPath": "D:\\SULI\\EGYETEM\\HALFEJFÉLÉVES\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221\\VUY9FY_HFT_2021221.Repository\\VUY9FY_HFT_2021221.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
