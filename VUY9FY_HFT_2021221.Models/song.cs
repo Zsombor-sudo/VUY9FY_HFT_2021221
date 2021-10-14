@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VUY9FY_HFT_2021221.Models
 {
-    class Class2
+    public class song
     {
     }
 }
