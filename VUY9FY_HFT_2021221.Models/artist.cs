@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VUY9FY_HFT_2021221.Models
 {
-    [Table("eloadok")]
+    [Table("artists")]
     public class artist
     {
         public artist() { }
@@ -21,5 +22,7 @@ namespace VUY9FY_HFT_2021221.Models
 
         [Column("band", TypeName = "bool", Order = 2)]
         public bool IsBand { get; set; }
+        [NotMapped]
+        public virtual ICollection<song> Songs { get; set; }
     }
 }
