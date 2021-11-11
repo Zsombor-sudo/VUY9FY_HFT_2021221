@@ -11,9 +11,9 @@ namespace VUY9FY_HFT_2021221.Data
     public partial class SongDbContext : DbContext
     {
         //tables
-        public virtual DbSet<song> Song { get; set; }
-        public virtual DbSet<artist> Artist { get; set; }
-        public virtual DbSet<list> List { get; set; }
+        public virtual DbSet<song> Songs { get; set; }
+        public virtual DbSet<artist> Artists { get; set; }
+        public virtual DbSet<list> Lists { get; set; }
 
         public SongDbContext()
         {
