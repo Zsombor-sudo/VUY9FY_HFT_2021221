@@ -7,7 +7,7 @@ using VUY9FY_HFT_2021221.Models;
 
 namespace VUY9FY_HFT_2021221.Repository
 {
-    interface IRepository
+    public interface IRepository
     {
         public interface IRepository<T> where T : class
         {
@@ -35,7 +35,7 @@ namespace VUY9FY_HFT_2021221.Repository
             void Delete(int id);
             void Update(artist artist);
         }
-        public interface IListRepository : IRepository<list>
+        public interface IListRepository 
         {
             list GetOne(int year, int score);
             IQueryable<list> GetAll();

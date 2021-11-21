@@ -42,7 +42,7 @@ namespace VUY9FY_HFT_2021221.Repository
 
         public void Update(list list)
         {
-            //nem akarom a két kulcsot megváltoztatni
+            //there are no attributes to be changed (both are keys)
         }
     }
 }

@@ -18,7 +18,7 @@ namespace VUY9FY_HFT_2021221.Models
 
         //eloadoid A zeneszám előadójának azonosítója(szám), ez a kulcs.
         //nev Az előadó(k) neve(szöveg). 
-        //zenekar Az előadó zenekar-e vagy sem.Zenekar esetén 1, egyéni előadónál 0 (szám). 
+        //zenekar Az előadó zenekar-e vagy sem. 
         //key
 
         [Key]
