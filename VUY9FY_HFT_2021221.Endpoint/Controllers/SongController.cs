@@ -32,7 +32,7 @@ namespace VUY9FY_HFT_2021221.Endpoint.Controllers
             return sl.GetOne(id);
         }
 
-        // POST /car
+        // POST /song
         [HttpPost]
         public void Post([FromBody] song value)
         {

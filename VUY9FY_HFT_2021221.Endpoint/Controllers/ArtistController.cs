@@ -27,28 +27,28 @@ namespace VUY9FY_HFT_2021221.Endpoint.Controllers
             return al.GetAll();
         }
 
-        // GET /song/5
+        // GET /artist/2
         [HttpGet("{id}")]
         public artist Get(int id)
         {
             return al.GetOne(id);
         }
 
-        // POST /car
+        // POST /artist
         [HttpPost]
         public void Post([FromBody] artist value)
         {
             al.Create(value);
         }
 
-        // PUT /song
+        // PUT /artist
         [HttpPut]
         public void Put([FromBody] artist value)
         {
             al.Update(value);
         }
 
-        // DELETE artist/5
+        // DELETE /artist/2
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

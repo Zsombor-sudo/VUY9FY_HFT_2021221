@@ -7,6 +7,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VUY9FY_HFT_2021221.Data;
+using VUY9FY_HFT_2021221.Logic;
+using VUY9FY_HFT_2021221.Repository;
+using static VUY9FY_HFT_2021221.Repository.IRepository;
 
 namespace VUY9FY_HFT_2021221.Endpoint
 {
@@ -16,6 +20,15 @@ namespace VUY9FY_HFT_2021221.Endpoint
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+
+            services.AddTransient<ISongLogic, SongLogic>();
+            services.AddTransient<IArtistLogic, ArtistLogic>();
+            services.AddTransient<IListLogic, ListLogic>();
+            services.AddTransient<ISongRepository, SongRepository>();
+            services.AddTransient<IArtistRepository, ArtistRepository>();
+            services.AddTransient<IListRepository, ListRepository>();
+            services.AddTransient<SongDbContext, SongDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -30,10 +43,7 @@ namespace VUY9FY_HFT_2021221.Endpoint
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapControllers();
             });
         }
     }

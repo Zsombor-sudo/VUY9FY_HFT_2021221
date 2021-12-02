@@ -26,11 +26,6 @@ namespace VUY9FY_HFT_2021221.Logic
             artistRepository.Delete(id);
         }
 
-        public IEnumerable<KeyValuePair<bool, int>> ArtistCountByIsBand()
-        {
-            return from artist in artistRepository.GetAll() group artist by artist.IsBand into g select new KeyValuePair<bool, int>(g.Key, g.Count());
-        }
-
         public IQueryable<artist> GetAll()
         {
             return artistRepository.GetAll();

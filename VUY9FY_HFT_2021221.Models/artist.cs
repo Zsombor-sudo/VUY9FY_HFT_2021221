@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace VUY9FY_HFT_2021221.Models
 {
@@ -35,6 +36,7 @@ namespace VUY9FY_HFT_2021221.Models
 
 
         [NotMapped]
+        [JsonIgnore]
         public virtual ICollection<song> Songs { get; set; }
     }
 }

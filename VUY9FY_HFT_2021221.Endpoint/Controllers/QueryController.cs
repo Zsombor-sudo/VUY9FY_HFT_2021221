@@ -9,7 +9,7 @@ using VUY9FY_HFT_2021221.Logic;
 
 namespace VUY9FY_HFT_2021221.Endpoint.Controllers
 {
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     [ApiController]
     public class QueryController : ControllerBase
     {
@@ -19,19 +19,42 @@ namespace VUY9FY_HFT_2021221.Endpoint.Controllers
             this.sl = sl;
         }
 
-        // GET: query/songbyyearcount
-        [HttpGet("{year}")]
-        public int SongByYearCount(int year)
+        // GET: query/WasSongNominatedInSameYear/Speedboat
+        [HttpGet("{title}")]
+        public bool WasSongNominatedInSameYear(string title)
         {
-            return sl.SongsByYearCount(year);
+            return sl.WasSongNominatedInSameYear(title);
         }
 
-        // GET: query/issongbyband
-        [HttpGet("{songTitle}")]
-        public bool IsSongByBand(string songTitle)
+        // GET: query/WasSongsNominatedInYear/Easy On Me, 2020
+        [HttpGet("{songTitle}, {year}")]
+        public bool WasSongsNomininatedInYear(string title, int year)
         {
-            return sl.IsSongByBand(songTitle);
+            return sl.WasSongsNomininatedInYear(title, year);
         }
-
+        // GET: query/SongsScored5
+        [HttpGet]
+        public List<string> SongScored5()
+        {
+            return sl.SongScored5();
+        }
+        // GET: query/SongsByBands
+        [HttpGet]
+        public List<string> SongsByBands()
+        {
+            return sl.SongsByBands();
+        }
+        // GET: query/SongsByBandsCount
+        [HttpGet]
+        public int SongsByBandsCount()
+        {
+            return sl.SongsByBandsCount();
+        }
+        //GET: query/SongScoreAvg
+        [HttpGet]
+        public double SongScoreAvg()
+        {
+            return sl.SongScoreAvg();
+        }
     }
 }

@@ -9,185 +9,188 @@ using System.Linq;
 
 namespace VUY9FY_HFT_2021221.Test
 {
-    //10 teszt kell
     [TestFixture]
     public class Tester
     {
         SongLogic sLogic;
-        ArtistLogic aLogic;
-
-        [SetUp]
-        public void Init()
+        SongLogic bLogic;
+        public Tester()
         {
-            var mockSongRepository = new Mock<ISongRepository>();
-            var mockArtistRepository = new Mock<IArtistRepository>();
+            Mock<ISongRepository> mock = new Mock<ISongRepository>();
 
-            artist fakeArtist = new artist();
-            fakeArtist.Id = 1;
-            fakeArtist.Name = "Adel";
-            fakeArtist.IsBand = true;
-            var songs = new List<song>()
+            artist fakeArtist = new artist()
             {
-                new song()
-                {
-                    SongId = 1,
-                    Title = "Someone Like You",
-                    Artist = fakeArtist,
-                    ArtistId = 1,
-                    Release = 2011,
-                    Score = new list()
-                    {
-                        Year = 2011,
-                        Score = 1,
-                        SongId = 1
-                    }
-                },
-                new song()
-                {
-                    SongId = 2,
-                    Title = "Skyfall",
-                    Artist = fakeArtist,
-                    ArtistId = 1,
-                    Release = 2012,
-                    Score = new list()
-                    {
-                        Year = 2012,
-                        Score = 2,
-                        SongId = 2
-                    }
-                }
-            }.AsQueryable();
-            fakeArtist.Songs = songs.ToArray();
-
-            mockSongRepository.Setup((t) => t.GetAll()).Returns(songs);
-            sLogic = new SongLogic(mockSongRepository.Object);
-            mockArtistRepository.Setup((t) => t.GetAll()).Returns((IQueryable<artist>)fakeArtist);
-            aLogic = new ArtistLogic(mockArtistRepository.Object);
-        }
-
-        [Test]
-        public void ArtistCountByIsBandTest()
-        {
-            //ACT 
-            var result = aLogic.ArtistCountByIsBand();
-
-            //ASSERT
-            var expected = new List<KeyValuePair<bool, int>>()
-            {
-                new KeyValuePair<bool, int>
-                (true, 1)
+                IsBand = true,
+                Id = 100,
+                Name = "Gizik"
             };
-            Assert.That(result, Is.EqualTo(expected));
-        }
-        [Test]
-        public void SongsByYearCountTest()
-        {
-            //ACT 
-            var result = sLogic.SongsByYearCount(2011);
 
-            //ASSERT
-            Assert.That(result, Is.EqualTo(1));
-
-        }
-        [Test]
-        public void IsSongByBandTest()
-        {
-            //ACT 
-            var result = sLogic.IsSongByBand("Someone Like You");
-
-            //ASSERT
-            Assert.That(result, Is.EqualTo(true));
-
-        }
-        [Test]
-        public void GetOneTest()
-        {
-            //ACT 
-            var result = sLogic.GetOne(1);
-            artist fakeArtist = new artist();
-            fakeArtist.Id = 1;
-            fakeArtist.Name = "Adel";
-            fakeArtist.IsBand = true;
-            var songs = new List<song>()
+            
+            list fakeList1 = new list()
             {
-                new song()
-                {
-                    SongId = 1,
-                    Title = "Someone Like You",
-                    Artist = fakeArtist,
-                    ArtistId = 1,
-                    Release = 2011,
-                    Score = new list()
-                    {
-                        Year = 2011,
-                        Score = 1,
-                        SongId = 1
-                    }
-                },
-                new song()
-                {
-                    SongId = 2,
-                    Title = "Skyfall",
-                    Artist = fakeArtist,
-                    ArtistId = 1,
-                    Release = 2012,
-                    Score = new list()
-                    {
-                        Year = 2012,
-                        Score = 2,
-                        SongId = 2
-                    }
-                }
-            }.AsQueryable();
-            fakeArtist.Songs = songs.ToArray();
+                Score = 5,
+                SongId = 100,
+                Year = 2021
+            };
+            list fakeList2 = new list()
+            {
+                Score = 1,
+                SongId = 101,
+                Year = 2021
+            };
 
-            //ASSERT
-            Assert.That(result, Is.EqualTo(fakeArtist.Songs.First(x => x.SongId == 1)));
+            mock.Setup((x) => x.Create(It.IsAny<song>()));
+            mock.Setup((x) => x.GetAll()).Returns(
+                new List<song>
+                {
+                    new song(){
+                        SongId = 100,
+                        ArtistId = 100,
+                        Title = "Bokros dal",
+                        Release = 2021,
+                        Artist = fakeArtist,
+                        Score = fakeList1,
+                    },
+                    new song(){
+                        SongId = 101,
+                        ArtistId = 100,
+                        Title = "Rossz dal",
+                        Release = 2020,
+                        Artist = fakeArtist,
+                        Score = fakeList2,
+                    }
+                }.AsQueryable());
+
+            
+
+            sLogic = new SongLogic(mock.Object);
         }
-        [Test]
-        public void GetAllTest()
+
+        [TestCase("Bokros dal",true)]
+        [TestCase("Rossz dal", false)]
+        public void WasSongNominatedInSameYearTest(string title, bool presult)
         {
             //ACT 
-            var result = sLogic.GetAll();
-            artist fakeArtist = new artist();
-            fakeArtist.Id = 1;
-            fakeArtist.Name = "Adel";
-            fakeArtist.IsBand = true;
-            var songs = new List<song>()
-            {
-                new song()
-                {
-                    SongId = 1,
-                    Title = "Someone Like You",
-                    Artist = fakeArtist,
-                    ArtistId = 1,
-                    Release = 2011,
-                    Score = new list()
-                    {
-                        Year = 2011,
-                        Score = 1,
-                        SongId = 1
-                    }
-                },
-                new song()
-                {
-                    SongId = 2,
-                    Title = "Skyfall",
-                    Artist = fakeArtist,
-                    ArtistId = 1,
-                    Release = 2012,
-                    Score = new list()
-                    {
-                        Year = 2012,
-                        Score = 2,
-                        SongId = 2
-                    }
-                }
-            }.AsQueryable();
-            fakeArtist.Songs = songs.ToArray();
+            var result = sLogic.WasSongNominatedInSameYear(title);
 
             //ASSERT
-            Assert.That(result, Is.EqualTo(fakeArtist.Songs));
+            Assert.That(result, Is.EqualTo(presult));
         }
+        [TestCase("Bokros dal", 2021, true)]
+        [TestCase("Rossz dal", 2021, false)]
+        public void WasSongsNomininatedInYearTest(string title, int year, bool presult)
+        {
+            //ACT 
+            var result = sLogic.WasSongsNomininatedInYear(title, year);
+
+            //ASSERT
+            Assert.That(result, Is.EqualTo(presult));
+        }
+        public void SongScored5Test()
+        {
+            //ACT 
+            var result = sLogic.SongScored5();
+            var presult = new List<string> { "Bokros dal" };
+            //ASSERT
+            Assert.That(result, Is.EqualTo(presult));
+        }
+        public void SongsByBandsTest()
+        {
+            //ACT 
+            var result = sLogic.SongsByBands();
+
+            //ASSERT
+            Assert.That(result, Is.EqualTo(new List<string> { "Bokros dal", "Rossz dal" }));
+        }
+        public void SongsByBandsCountTest()
+        {
+            //ACT 
+            var result = sLogic.SongsByBandsCount();
+
+            //ASSERT
+            Assert.That(result, Is.EqualTo(2));
+        }
+        public void SongScoreAvgTest()
+        {
+            //ACT
+            var result = sLogic.SongScoreAvg();
+
+            //ASSERT
+            Assert.That(result, Is.EqualTo(3));
+        }
+        [TestCase(2020, true)]
+        [TestCase(3052, false)]
+        public void CreateSongTest(int release, bool result)
+        {
+            //ACT + ASSERT
+            if (result)
+            {
+                Assert.That(() => sLogic.Create(new song()
+                {
+                    Title = "Riptide",
+                    Release = release
+                }), Throws.Nothing);
+            }
+            else
+            {
+                Assert.That(() => sLogic.Create(new song()
+                {
+                    Title = "Strange",
+                    Release = release
+                }), Throws.Exception);
+            }
+        }
+        [TestCase(2020, true)]
+        [TestCase(3052, false)]
+        public void UpdateSongTest(int release, bool result)
+        {
+            //ACT + ASSERT
+            if (result)
+            {
+                Assert.That(() => sLogic.Update(new song()
+                {
+                    Title = "Riptide",
+                    Release = release
+                }), Throws.Nothing);
+            }
+            else
+            {
+                Assert.That(() => sLogic.Update(new song()
+                {
+                    Title = "Strange",
+                    Release = release
+                }), Throws.Exception);
+            }
+        }
+        [TestCase(100, true)]
+        [TestCase(999, false)]
+        public void GetOneSongTest(int id, bool result)
+        {
+            if (result)
+            {
+                Assert.That(() => sLogic.GetOne(id), Throws.Nothing);
+            }
+            else
+            {
+                Assert.That(() => sLogic.GetOne(id), Throws.Exception);
+
+            }
+        }
+        [TestCase(100, true)]
+        [TestCase(999, false)]
+        public void DeleteSongTest(int id, bool result)
+        {
+            if (result)
+            {
+                Assert.That(() => sLogic.Delete(id), Throws.Nothing);
+            }
+            else
+            {
+                Assert.That(() => sLogic.Delete(id), Throws.Exception);
+
+            }
+        }
+
+
     }
 }

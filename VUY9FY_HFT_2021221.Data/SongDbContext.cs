@@ -17,7 +17,7 @@ namespace VUY9FY_HFT_2021221.Data
 
         public SongDbContext()
         {
-            // creating the neccessary elements to get the database
+            //tudom hogy nem fut le de egyszerűen ötletem sincs mi a hiba
             this.Database.EnsureCreated();
         }
 
@@ -30,12 +30,11 @@ namespace VUY9FY_HFT_2021221.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.
-                    UseLazyLoadingProxies().
-                    // |DataDirectory|
-                    // must close the collection otherwise can not copy data
-                    // data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\CarDb.mdf;integrated security=True;MultipleActiveResultSets=True
-                    UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SongDb.mdf;Integrated Security=True");
+                string conn =
+                    @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SongDB.mdf;Integrated Security=True";
+                optionsBuilder
+                    .UseLazyLoadingProxies()
+                    .UseSqlServer(conn);
             }
         }
 
@@ -54,6 +53,7 @@ namespace VUY9FY_HFT_2021221.Data
                     .WithOne(song => song.Score)
                     .OnDelete(DeleteBehavior.ClientSetNull);
             });
+            modelBuilder.Entity<list>().HasKey(list => new { list.Year, list.Score });
 
             artist denzelCurry = new artist() { Id = 1, Name = "Denzel Curry", IsBand = false};
             artist kanyeWest = new artist() { Id = 2, Name = "Kanye West", IsBand = false };
@@ -70,7 +70,7 @@ namespace VUY9FY_HFT_2021221.Data
             song leanderKills2 = new song() { SongId = 8, ArtistId = leanderKills.Id, Title = "Luxusnyomor", Release = 2019 };
 
             list list1 = new list() { Year = 2021, Score = 3, SongId = kanyeWest1.SongId };
-            list list2 = new list() { Year = 2021, Score = 1, SongId = adele1.SongId };
+            list list2 = new list() { Year = 2020, Score = 1, SongId = adele1.SongId };
             list list3 = new list() { Year = 2005, Score = 1, SongId = kanyeWest2.SongId };
 
             modelBuilder.Entity<artist>().HasData(denzelCurry, kanyeWest, adele, leanderKills);

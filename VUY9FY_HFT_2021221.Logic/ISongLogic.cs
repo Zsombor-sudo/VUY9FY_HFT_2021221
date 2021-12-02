@@ -14,9 +14,11 @@ namespace VUY9FY_HFT_2021221.Logic
         void Create(song song);
         void Delete(int id);
         void Update(song song);
-
-        int SongsByYearCount(int year);
-        bool IsSongByBand(string songTitle);
-
+        public bool WasSongNominatedInSameYear(string title);
+        bool WasSongsNomininatedInYear(string title, int year);
+        List<string> SongScored5();
+        List<string> SongsByBands();
+        int SongsByBandsCount();
+        double SongScoreAvg();
     }
 }
