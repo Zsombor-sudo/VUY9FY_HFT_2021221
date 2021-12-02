@@ -19,8 +19,7 @@ namespace VUY9FY_HFT_2021221
                 Console.WriteLine();
                 Console.WriteLine("Press F to quit");
                 Console.WriteLine("-----------------------------------");
-                Console.WriteLine("Songs table   - S");
-                Console.WriteLine("Artists talbe - A");
+                Console.WriteLine("Songs table   - S");                Console.WriteLine("Artists talbe - A");
                 Console.WriteLine("Lists table   - L");
                 Console.WriteLine("-----------------------------------");
                 Console.WriteLine("Non-crud:         (use the numbers to select one)");

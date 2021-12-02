@@ -24,14 +24,11 @@ namespace VUY9FY_HFT_2021221.Models
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("artist_id", TypeName = "int", Order = 0)]
         public int Id { get; set; }
 
         //normal attributes
-        [Column("artist_name", TypeName = "string", Order = 1)]
         public string Name { get; set; }
 
-        [Column("band", TypeName = "bool", Order = 2)]
         public bool IsBand { get; set; }
 
 

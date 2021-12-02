@@ -15,14 +15,14 @@ namespace VUY9FY_HFT_2021221.Models
         public list() { }
  
         [Key]
-        [Column("year", TypeName = "int", Order = 0)]
+        
         public int Year { get; set; }
 
         [Key]
-        [Column("score", TypeName = "int", Order = 1)]
+        
         public int Score { get; set; }
 
-        [Column("song_id", TypeName = "int", Order = 2)]
+        
         public int SongId { get; set; }
 
 
