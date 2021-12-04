@@ -12,7 +12,15 @@ namespace VUY9FY_HFT_2021221
             System.Threading.Thread.Sleep(8000);
 
             RestService rest = new RestService("http://localhost:13442");
-
+            //Logicba IEnumerable?
+   //A Test projektben NUnit és Moq könyvtárakat kell használni. A Logic a Moq segítségével egy áladatbázist
+   //kap függőségként. A unit tesztek elsősorban a non-crud metódusokat tesztelik a
+   //Logic - ból! Valamint a Logic - ban lévő Create metódusok hibakezelését(pl.: névként üres string
+   //dobjon kivételt, stb.)!Egy Logic - beli Create abban különbözik egy Repository - beli Create - től,
+   //hogy hibakezelést is végez, Exception - öket dob.A Repository-beli Create ellenőrzés nélkül
+   //mentse el az adatbázisba a megkapott objektumot;
+   //5 NON-cured teszt, 3 create, 2 akármi
+   //testek megcsinálása?
             bool fut = true;
             while (fut)
             {
