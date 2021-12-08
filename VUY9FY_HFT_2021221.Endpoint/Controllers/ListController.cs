@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using VUY9FY_HFT_2021221.Logic;
 using VUY9FY_HFT_2021221.Models;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace VUY9FY_HFT_2021221.Endpoint.Controllers
 {

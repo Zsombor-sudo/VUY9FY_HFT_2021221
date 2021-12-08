@@ -23,16 +23,29 @@ namespace VUY9FY_HFT_2021221.Logic
 
         public void Delete(int year, int score)
         {
+            if (!listRepository.GetAll().Select(x => x.Year).Contains(year) || !listRepository.GetAll().Select(x => x.Score).Contains(score))
+            {
+                throw new ArgumentException("The year or score you entered is invalid.");
+            }
             listRepository.Delete(year, score);
         }
 
         public IQueryable<list> GetAll()
         {
+            if (listRepository.GetAll() == null)
+            {
+                throw new ArgumentException("This table is empty.");
+
+            }
             return listRepository.GetAll();
         }
 
         public list GetOne(int year, int score)
         {
+            if (!listRepository.GetAll().Select(x => x.Year).Contains(year) || !listRepository.GetAll().Select(x => x.Score).Contains(score))
+            {
+                throw new ArgumentException("The year or score you entered is invalid.");
+            }
             return listRepository.GetOne(year, score);
         }
     }

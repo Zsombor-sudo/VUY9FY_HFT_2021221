@@ -25,7 +25,7 @@ namespace VUY9FY_HFT_2021221.Test
                 Name = "Gizik"
             };
 
-            
+
             list fakeList1 = new list()
             {
                 Score = 5,
@@ -36,7 +36,7 @@ namespace VUY9FY_HFT_2021221.Test
             {
                 Score = 1,
                 SongId = 101,
-                Year = 2021
+                Year = 2020
             };
 
             mock.Setup((x) => x.Create(It.IsAny<song>()));
@@ -55,18 +55,18 @@ namespace VUY9FY_HFT_2021221.Test
                         SongId = 101,
                         ArtistId = 100,
                         Title = "Rossz dal",
-                        Release = 2020,
+                        Release = 2019,
                         Artist = fakeArtist,
                         Score = fakeList2,
                     }
                 }.AsQueryable());
 
-            
+
 
             sLogic = new SongLogic(mock.Object);
         }
 
-        [TestCase("Bokros dal",true)]
+        [TestCase("Bokros dal", true)]
         [TestCase("Rossz dal", false)]
         public void WasSongNominatedInSameYearTest(string title, bool presult)
         {
@@ -86,6 +86,7 @@ namespace VUY9FY_HFT_2021221.Test
             //ASSERT
             Assert.That(result, Is.EqualTo(presult));
         }
+        [Test]
         public void SongScored5Test()
         {
             //ACT 
@@ -102,6 +103,7 @@ namespace VUY9FY_HFT_2021221.Test
             //ASSERT
             Assert.That(result, Is.EqualTo(new List<string> { "Bokros dal", "Rossz dal" }));
         }
+        [Test]
         public void SongsByBandsCountTest()
         {
             //ACT 
@@ -110,6 +112,7 @@ namespace VUY9FY_HFT_2021221.Test
             //ASSERT
             Assert.That(result, Is.EqualTo(2));
         }
+        [Test]
         public void SongScoreAvgTest()
         {
             //ACT
@@ -119,7 +122,7 @@ namespace VUY9FY_HFT_2021221.Test
             Assert.That(result, Is.EqualTo(3));
         }
         [TestCase(2020, true)]
-        [TestCase(3052, false)]
+        [TestCase(-15, false)]
         public void CreateSongTest(int release, bool result)
         {
             //ACT + ASSERT
@@ -141,7 +144,7 @@ namespace VUY9FY_HFT_2021221.Test
             }
         }
         [TestCase(2020, true)]
-        [TestCase(3052, false)]
+        [TestCase(-15, false)]
         public void UpdateSongTest(int release, bool result)
         {
             //ACT + ASSERT

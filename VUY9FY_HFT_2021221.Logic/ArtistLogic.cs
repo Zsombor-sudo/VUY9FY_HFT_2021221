@@ -23,16 +23,28 @@ namespace VUY9FY_HFT_2021221.Logic
 
         public void Delete(int id)
         {
+            if (!artistRepository.GetAll().Select(x => x.Id).Contains(id))
+            {
+                throw new ArgumentException("The id you entered is invalid.");
+            }
             artistRepository.Delete(id);
         }
 
         public IQueryable<artist> GetAll()
         {
+            if (artistRepository.GetAll() == null)
+            {
+                throw new ArgumentException("This table is empty.");
+            }
             return artistRepository.GetAll();
         }
 
         public artist GetOne(int id)
         {
+            if (!artistRepository.GetAll().Select(x => x.Id).Contains(id))
+            {
+                throw new ArgumentException("The id you entered is invalid.");
+            }
             return artistRepository.GetOne(id);
         }
 
