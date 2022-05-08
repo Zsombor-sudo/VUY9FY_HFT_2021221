@@ -1,0 +1,3 @@
+Az előző félévben, az akkori tanárom megengedte, hogy a list táblám így maradjon, vagyis, mivel
+csak kulcsok vannak benne, így nincs benne mező amit update-elhetnék, ezért nincsen update és put-ja.
+Emelett a törléshez 2 kulcs is kell, amit nem sikerült átküldenem a wpf-ből, így azt is kivettem.
