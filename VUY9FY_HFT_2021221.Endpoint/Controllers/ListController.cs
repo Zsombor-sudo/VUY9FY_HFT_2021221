@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,11 @@ namespace VUY9FY_HFT_2021221.Endpoint.Controllers
     public class ListController : ControllerBase
     {
         IListLogic ll;
-        public ListController(IListLogic ll)
+        IHubContext<SignalRHub> hub;
+        public ListController(IListLogic ll, IHubContext<SignalRHub> hub)
         {
             this.ll = ll;
+            this.hub = hub;
         }
 
         // GET: /list
@@ -41,6 +44,7 @@ namespace VUY9FY_HFT_2021221.Endpoint.Controllers
         public void Post([FromBody] list value)
         {
             ll.Create(value);
+            this.hub.Clients.All.SendAsync("ListCreated", value);
         }
 
         // PUT /list
@@ -54,9 +58,12 @@ namespace VUY9FY_HFT_2021221.Endpoint.Controllers
         [HttpDelete("{scoreyear}")]
         public void Delete(string scoreyear)
         {
+            
             int year = int.Parse(scoreyear.Substring(scoreyear.Length - 4));
             int score = int.Parse(scoreyear.Substring(0, scoreyear.Length - 4));
+            var listToDelete = ll.GetOne(year, score);
             ll.Delete(year, score);
+            this.hub.Clients.All.SendAsync("ListDeleted", listToDelete);
         }
     }
 }

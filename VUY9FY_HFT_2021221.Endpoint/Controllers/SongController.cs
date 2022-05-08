@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,10 @@ namespace VUY9FY_HFT_2021221.Endpoint.Controllers
     public class SongController : ControllerBase
     {
         ISongLogic sl;
+        IHubContext<SignalRHub> hub;
         public SongController(ISongLogic sl)
         {
+            this.hub = hub;
             this.sl = sl;
         }
 
@@ -37,6 +40,7 @@ namespace VUY9FY_HFT_2021221.Endpoint.Controllers
         public void Post([FromBody] song value)
         {
             sl.Create(value);
+            this.hub.Clients.All.SendAsync("SongCreated", value);
         }
 
         // PUT /song
@@ -44,13 +48,16 @@ namespace VUY9FY_HFT_2021221.Endpoint.Controllers
         public void Put([FromBody] song value)
         {
             sl.Update(value);
+            this.hub.Clients.All.SendAsync("SongUpdated", value);
         }
 
         // DELETE song/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            var songToDelete = this.sl.GetOne(id);
             sl.Delete(id);
+            this.hub.Clients.All.SendAsync("SongDeleted", songToDelete);
         }
     }
 }

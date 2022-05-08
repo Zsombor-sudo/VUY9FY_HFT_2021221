@@ -13,9 +13,11 @@ namespace VUY9FY_HFT_2021221.Endpoint.Controllers
     public class QueryController : ControllerBase
     {
         ISongLogic sl;
-        public QueryController(ISongLogic sl)
+        IArtistLogic al;
+        public QueryController(ISongLogic sl, IArtistLogic al)
         {
             this.sl = sl;
+            this.al = al;
         }
 
         // GET: query/WasSongNominatedInSameYear/Speedboat
