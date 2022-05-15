@@ -15,10 +15,10 @@ namespace VUY9FY_HFT_2021221.Endpoint.Controllers
     {
         ISongLogic sl;
         IHubContext<SignalRHub> hub;
-        public SongController(ISongLogic sl)
+        public SongController(ISongLogic sl, IHubContext<SignalRHub> hub)
         {
-            this.hub = hub;
             this.sl = sl;
+            this.hub = hub;
         }
 
         // GET: /song

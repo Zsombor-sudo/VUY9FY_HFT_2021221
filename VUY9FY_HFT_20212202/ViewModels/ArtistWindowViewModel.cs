@@ -72,7 +72,7 @@ namespace VUY9FY_HFT_20212202.WPF.ViewModels
         {
             if (!IsInDesignMode)
             {
-                Artists = new RestCollection<artist>("http://localhost:13442/", "artist", "hub");
+                Artists = new RestCollection<artist>("http://localhost:13442/", "artist");
 
                 CreateCommand = new RelayCommand(
                     () => Artists.Add(new artist()

@@ -21,11 +21,12 @@ namespace VUY9FY_HFT_20212202.WPF.Windows
     /// </summary>
     public partial class SongWindow : Window
     {
-        public SongWindow(list songList)
+        public SongWindow(list SelectedList)
         {
             InitializeComponent();
             this.DataContext = new SongWindowViewModel();
-            (this.DataContext as SongWindowViewModel).Setup(songList);
+            (this.DataContext as SongWindowViewModel).Setup(SelectedList);
+
         }
     }
 }

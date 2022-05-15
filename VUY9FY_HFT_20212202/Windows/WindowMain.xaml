@@ -16,6 +16,7 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0">
+            
             <ListBox ItemsSource="{Binding songList}" SelectedItem="{Binding SelectedList}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -26,6 +27,9 @@
         </Grid>
 
         <StackPanel Grid.Column="1">
+            <Label Content="Song ID: " Background="LightPink"  Padding="10"/>
+            <TextBox Text="{Binding SelectedList.SongId}" Padding="10" Margin="0,0,0,20"/>
+            <TextBox Text="{Binding SelectedList.Year}" Padding="10" Margin="0,0,0,20"/>
             <Button Content="Open songs" Command="{Binding OpenCommand}" Margin="10" Padding="10"/>
             <Button Content="Create" Command="{Binding CreateCommand}" Margin="10" Padding="10"/>
             <!--<Button Content="Delete" Command="{Binding DeleteCommand}" Margin="10" Padding="10"/>-->

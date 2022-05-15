@@ -17,8 +17,6 @@ namespace VUY9FY_HFT_2021221.Data
 
         public SongDbContext()
         {
-            //tudom hogy nem fut le de egyszerűen ötletem sincs mi a hiba
-            int lol = 1;
             this.Database.EnsureCreated();
         }
 

@@ -34,13 +34,12 @@ namespace VUY9FY_HFT_20212202.WPF.ViewModels
             }
         }
 
-        public void Setup(list songList)
+        public void Setup(list yTContentCreator)
         {
-            SelectedList = songList;
+            SelectedList = yTContentCreator;
         }
 
         private song selectedSong;
-
         public song SelectedSong
         {
             get { return selectedSong; }
@@ -78,7 +77,7 @@ namespace VUY9FY_HFT_20212202.WPF.ViewModels
         {
             if (!IsInDesignMode)
             {
-                Songs = new RestCollection<song>("http://localhost:13442/", "song", "hub");
+                Songs = new RestCollection<song>("http://localhost:13442/", "song");
 
                 OpenCommand = new RelayCommand(
                     () => new ArtistWindow(SelectedSong).ShowDialog(),
@@ -88,7 +87,11 @@ namespace VUY9FY_HFT_20212202.WPF.ViewModels
                 CreateCommand = new RelayCommand(
                     () => Songs.Add(new song()
                     {
-                        Title = SelectedSong.Title
+                        Title = SelectedSong.Title,
+                        ArtistId = 1,
+                        //SongId = SelectedList.SongId,
+                        Artist = new artist(),
+                        Score = SelectedList
                     }));
 
                 UpdateCommand = new RelayCommand(
@@ -101,7 +104,6 @@ namespace VUY9FY_HFT_20212202.WPF.ViewModels
                     );
 
                 SelectedSong = new song();
-
                 SelectedList = new list();
             }
         }

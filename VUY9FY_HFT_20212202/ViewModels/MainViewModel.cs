@@ -60,15 +60,13 @@ namespace VUY9FY_HFT_20212202.WPF.ViewModels
                 songList = new RestCollection<list>("http://localhost:13442/", "list");
 
                 OpenCommand = new RelayCommand(
-                    () => new SongWindow(selectedList).ShowDialog(),
+                    () => new SongWindow(SelectedList).ShowDialog(),
                     () => selectedList != null
                     );
 
                 CreateCommand = new RelayCommand(
                     () => songList.Add(new list()
-                    {
-                        Year = 1858
-                    }));
+                    { SongId = SelectedList.SongId, Year = SelectedList.Year }));
 
                 //DeleteCommand = new RelayCommand(
                 //    () => songList.Delete(SelectedList.SongId, SelectedList.Year),
