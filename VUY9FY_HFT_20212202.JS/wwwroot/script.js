@@ -21,15 +21,15 @@ function setupSignalR() {
         .build();
 
     connection.on("SongCreated", (user, message) => {
-        getdata();
+        getData();
     });
 
     connection.on("SongDeleted", (user, message) => {
-        getdata();
+        getData();
     });
 
     connection.on("SongUpdated", (user, message) => {
-        getdata();
+        getData();
     });
 
     connection.onclose(async () => {
@@ -68,20 +68,39 @@ function display() {
     });
 }
 
+function create() {
+    let name = document.getElementById('songNametb').value;
+    let aid = document.getElementById('songArtistIDtb').value;
+    fetch('http://localhost:13442/song', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', },
+        body: JSON.stringify(
+            { title: name, artistId: aid }),
+    })
+        .then(response => response)
+        .then(data => {
+            console.log('Success:', data);
+            getData();
+        })
+        .catch((error) => { console.error('Error:', error); });
+}
+
 function update() {
     document.getElementById('updatesongNametb').style.display = 'none';
+    let aid = document.getElementById('updateArtistIDtb').value;
+    document.getElementById('updateArtistIDtb').style.display = 'none';
     let name = document.getElementById('updatesongNametb').value;
     
     fetch('http://localhost:13442/song', {
     method: 'PUT',
         headers: { 'Content-Type': 'application/json', },
         body: JSON.stringify(
-            { title: name, songId: songIdToUpdate }),
+            { title: name, artistId: aid, songId: songIdToUpdate }),
     })
         .then(response => response)
         .then(data => {
             console.log('Success:', data);
-            getdata();
+            getData();
         })
         .catch((error) => { console.error('Error:', error); });
 }
@@ -94,7 +113,7 @@ function remove(id) {
         .then(response => response)
         .then(data => {
             console.log('Success:', data);
-            getdata();
+            getData();
         })
         .catch((error) => { console.error('Error:', error); });
 }
